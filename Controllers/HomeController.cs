@@ -13,6 +13,11 @@ namespace Prepod.Controllers
             return View();
         }
 
+        public ActionResult PartialRaspisanie()
+        {
+            return View();
+        }
+
         public ActionResult About()
         {
             ViewBag.Message = "Your application description page.";

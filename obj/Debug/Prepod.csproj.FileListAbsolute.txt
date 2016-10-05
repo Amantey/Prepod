@@ -38,3 +38,11 @@ C:\Users\Александр\Documents\Visual Studio 2013\Projects\Prepod\Prepod\
 C:\Users\Александр\Documents\Visual Studio 2013\Projects\Prepod\Prepod\obj\Debug\Prepod.csprojResolveAssemblyReference.cache
 C:\Users\Александр\Documents\Visual Studio 2013\Projects\Prepod\Prepod\obj\Debug\Prepod.dll
 C:\Users\Александр\Documents\Visual Studio 2013\Projects\Prepod\Prepod\obj\Debug\Prepod.pdb
+C:\Users\Denis\Documents\GitHub\Prepod\bin\Prepod.dll.config
+C:\Users\Denis\Documents\GitHub\Prepod\bin\Prepod.dll
+C:\Users\Denis\Documents\GitHub\Prepod\bin\Prepod.pdb
+C:\Users\Denis\Documents\GitHub\Prepod\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\Denis\Documents\GitHub\Prepod\bin\Microsoft.Web.Infrastructure.xml
+C:\Users\Denis\Documents\GitHub\Prepod\obj\Debug\Prepod.dll
+C:\Users\Denis\Documents\GitHub\Prepod\obj\Debug\Prepod.pdb
+C:\Users\Denis\Documents\GitHub\Prepod\obj\Debug\Prepod.csprojResolveAssemblyReference.cache

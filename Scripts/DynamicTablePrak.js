@@ -327,7 +327,7 @@
     // Вставка значений из выплывающего списка
 
 
-    $('#panel').click(function (e) {
+    $('#SlidePanel').click(function (e) {
 
         if ($(this).hasClass('visible')) {
 
@@ -378,8 +378,14 @@
     $('#isRussianBudget').click(function () {
         if ($(this).hasClass('ActiveRadioButton')) {
             $(this).removeClass('ActiveRadioButton').addClass('InactiveRadioButton');
+           
+            $("#markerList .BelarussianBudget").removeClass("BelarussianBudget").addClass("VisBelarussianBudget");
             ModulEvaluation();
-        } else { $(this).removeClass('InactiveRadioButton').addClass('ActiveRadioButton'); ModulEvaluation(); }
+        } else {
+            $(this).removeClass('InactiveRadioButton').addClass('ActiveRadioButton');
+            ModulEvaluation();
+            $("#markerList .VisBelarussianBudget").removeClass("VisBelarussianBudget").addClass("BelarussianBudget");
+        }
     });
 
     RewriteClassOnHead();

@@ -22,7 +22,7 @@
         for (j = 0; j < 14; j++) {
             columns += "<td class = " + 'col' + j + "></td>";
         }
-        alert("dewdecd");
+
         /*$.ajax({
             url: 'Peoples/Index',
             type: "GET",
@@ -31,7 +31,6 @@
             }
         });*/
         $.get('http://localhost:49466/Peoples/Index', function (r) { alert('vars'); });
-        alert("dewdecd");
         /*$.getJSON('@Url.Action("Index", "PeoplesController")', function (data) {
             alert ("dcdcd")
 
