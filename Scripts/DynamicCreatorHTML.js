@@ -4,7 +4,18 @@
     var title = "";
 
 
+    $.ajaxSetup({ cache: false });
+    $(".compItem").click(function (e) {
+        alert("wd")
+        e.preventDefault();
+        $.get('Students/IndexP', function (data) {
+            $('#dialogContent').html(data);
+            $('#modDialog').modal('show');
+        });
+    });
+
     var CreateTable = function () {
+        alert("wdawdw")
         // КОСТЫЛЬ!
         title += "<thead>";
 
@@ -23,45 +34,11 @@
             columns += "<td class = " + 'col' + j + "></td>";
         }
 
-        /*$.ajax({
-            url: 'Peoples/Index',
-            type: "GET",
-            success: function (result) {
-                alert ("ededed")
-            }
-        });*/
-        $.get('http://localhost:49466/Peoples/Index', function (r) { alert('vars'); });
-        /*$.getJSON('@Url.Action("Index", "PeoplesController")', function (data) {
-            alert ("dcdcd")
-
-        });*/
-        /*
-        $.ajax({
-            type: "GET",
-            url: 'Peoples/Index',
-            success: function (response) {
-                if (response.length == 0) {
-                    alert("sdsdsdsd")
-                }
-                else {
-                    alert (response.length)
-                    /*
-                    for (i = 0; i < response.length - 1; i++) {  // строки
-                        content += '<tr>';
-                        if (i % 2 == 0) {                   // КОСТЫЛИ, ОНИ ПОВСЮДУ, АААААА!
-                            content += "<td rowspan='2' class = 'no-target'  > " + response[0].name_s + "</td>" + columns + '</tr>';
-                        }
-                        else content += columns + '</tr>';
-                    }
-                }
-            }
-        })
-
-        */
+        
 
         content += "</tbody>"
         $("#TableListOfStudentPrak").append(content);
     }
-
+    
     CreateTable();
 });
