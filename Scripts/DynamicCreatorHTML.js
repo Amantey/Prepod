@@ -4,7 +4,18 @@
     var title = "";
 
 
+    $.ajaxSetup({ cache: false });
+    $(".compItem").click(function (e) {
+        alert("wd")
+        e.preventDefault();
+        $.get('Students/IndexP', function (data) {
+            $('#dialogContent').html(data);
+            $('#modDialog').modal('show');
+        });
+    });
+
     var CreateTable = function () {
+        alert("wdawdw")
         // КОСТЫЛЬ!
         title += "<thead>";
 
@@ -23,6 +34,7 @@
             columns += "<td class = " + 'col' + j + "></td>";
         }
 
+<<<<<<< HEAD
         for (i = 0; i < 15 - 1; i++) {  // строки
             content += '<tr>';
             if (i % 2 == 0) {                   // КОСТЫЛИ, ОНИ ПОВСЮДУ, АААААА!
@@ -31,10 +43,13 @@
             else content += columns + '</tr>';
                    
         }
+=======
+        
+>>>>>>> origin/master
 
         content += "</tbody>"
         $("#TableListOfStudentPrak").append(content);
     }
-
+    
     CreateTable();
 });

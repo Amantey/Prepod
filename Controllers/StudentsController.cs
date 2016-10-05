@@ -11,10 +11,10 @@ namespace Prepod.Controllers
     {
         // GET: Students
         mydbEntities model = new mydbEntities();
-        public ActionResult Index()
+        public ActionResult IndexP()
         {
             List<students_group> students = model.students_group.ToList();
-            return View(students);
+            return PartialView(students);
         }
     }
 }
