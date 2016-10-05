@@ -143,6 +143,7 @@
             })
 
             RewriteClassOnCollumn();
+            ModulEvaluation();
         }
 
     }
@@ -197,6 +198,7 @@
             }
         }
         RewriteClassOnCollumn();
+        ModulEvaluation();
     }
 
 
@@ -321,7 +323,32 @@
 
     }
 
+    // удаляет колонку с модулем
+    DeleteModulColumn = function () {
+        if (isShift == true && $(this).hasClass("modul")) {
 
+            var numberOfColumn = $(this).index();
+
+            var numberOfRow = $(this).parent('tr').index();
+            var colspan = 0;
+            $("#TableListOfStudentPrak tbody tr:nth-child(" + (numberOfRow + 1) + ") td").each(function () {
+                if ($(this).index() > numberOfColumn) return;
+                if ($(this).hasAttr('colspan')) {
+                    colspan += Number($(this).attr('colspan') - 1);
+                }
+            });
+
+            $("#TableListOfStudentPrak tbody tr:nth-child(odd) td.col" + (numberOfColumn - 1)).remove();
+            $("#TableListOfStudentPrak tbody tr:nth-child(even) td.col" + (numberOfColumn - 1 + colspan)).remove();
+
+
+            $("#TableListOfStudentPrak thead tr:nth-child(even) th.col" + (numberOfColumn - 1)).remove();
+            $("#TableListOfStudentPrak thead tr:nth-child(odd) th.col" + (numberOfColumn - 1 + colspan)).remove();
+
+            ModulEvaluation();
+            RewriteClassOnCollumn();
+        }
+    }
     
 
     // Вставка значений из выплывающего списка
@@ -332,7 +359,7 @@
         if ($(this).hasClass('visible')) {
 
             var elm = e.target || event.srcElement;
-            if (elm.id == "panel")
+            if (elm.id == "SlidePanel")
                 $(this).removeClass('visible');
         }
         else {
@@ -352,7 +379,7 @@
 
     InsertInput = function (e) {
         if (isCtrl == true || isShift == true || isAlt == true || $(this).hasClass("no-target") || $(this).hasClass("col-leave") || $(this).hasClass("modul")) { return; }
-        if ($('#panel').hasClass('visible')) {
+        if ($('#SlidePanel').hasClass('visible')) {
 
             if (mark == "delete") {
                 $(this).html('');
@@ -387,8 +414,38 @@
             $("#markerList .VisBelarussianBudget").removeClass("VisBelarussianBudget").addClass("BelarussianBudget");
         }
     });
+    InsertInputHead = function (e) {
+
+        if (isCtrl == true || isShift == true || isAlt == true || $(this).hasClass("no-target") || $(this).hasClass("col-leave") || $(this).hasClass("modul")) { return; }
+
+        var t = e.target || e.srcElement;
+
+        var elm_name = t.tagName.toLowerCase();
+
+        if (elm_name == 'input') { return false; }
+
+        var val = $(this).html();
+
+        var code = '<input type="text" id="edit" value="' + val + '" style = "width: 47px; height: 20px; color: black;"/>';
+
+        $(this).empty().append(code);
+
+
+
+        $('#edit').focus();
+        $('#edit').blur(function () {
+            var val = $(this).val();
+
+            $(this).parent().empty().html(val);
+
+        });
+    }
+
+    $("#TableListOfStudentPrak ").on('click', 'th', InsertInputHead)
+
 
     RewriteClassOnHead();
+    $('.table_Students').on('click', 'td', DeleteModulColumn);
     $('.table_Students').on('click', 'td', InsertInput);
     $('.table_Students').on('click', 'th', InsertInput);
     $("#TableListOfStudentPrak ").on("click", 'td', InsertCollumn);

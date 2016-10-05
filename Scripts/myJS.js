@@ -5,14 +5,14 @@
 
 
     var id = "";
-    $.ajax({
+    /*$.ajax({
         type: "GET",
         url: 'Home/GetRaspisanie',
         dataType: "json",
         success: function (data) {
             addSybject(data);
         }
-    });
+    });*/
     
     var archievDate = new Date();
 
@@ -318,50 +318,8 @@
 
     //////////////////////////блок отвечающий за ввод в ячейку таблицы \\\\\\\\\\\\\\\\
     
-   /* InsertInput =  function (e) {
-
-        if (isCtrl == true || isShift == true || isAlt == true || $(this).hasClass("no-target") || $(this).hasClass("col-leave") || $(this).hasClass("modul")) { return; }
-
-        var t = e.target || e.srcElement;
-
-        var elm_name = t.tagName.toLowerCase();
-
-        if (elm_name == 'input') { return false; }
-
-        var val = $(this).html();
-
-        if ($(this).is("td")) {
-            var code = '<input type="text" id="edit" value="' + val + '" style = "width: 27px; height: 20px;"/>';
-        }
-        else if ($(this).is("th")) {
-            var code = '<input type="text" id="edit" value="' + val + '" style = "width: 47px; height: 20px; color: black;"/>';
-        } else return;
-        $(this).empty().append(code);
-        
-
-
-        $('#edit').focus();
-        $('#edit').blur(function () {
-            var val;
-            if ($(this).parent().is("td")) {
-                val = $(this).val().slice("0", "3");
-            } else if ($(this).parent().is("th")) {
-                val = $(this).val();
-            }
-            $(this).parent().empty().html(val);
-            if ($('#modalListOfStudentLek').is(':visible')) {
-
-                CountingLeaving();
-
-            }
-            if ($('#modalListOfStudentPrak').is(':visible')) {
-
-               ModulEvaluation();
-
-            }
-        });
-    } */
-   
+    
+   ///////////////////////////
 
 
     /*$('[data-toggle="popover"]').popover({
