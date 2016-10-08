@@ -16,5 +16,16 @@ namespace Prepod.Controllers
             List<students_group> students = model.students_group.ToList();
             return PartialView(students);
         }
+
+        public ActionResult Index()
+        {
+            List<String> Str = new List<string>();
+            List<students_group> students = model.students_group.ToList();
+            foreach (var s in students)
+            {
+                Str.Add(s.name_s);
+            }
+            return Json(Str,JsonRequestBehavior.AllowGet);
+        }
     }
 }
