@@ -11,9 +11,14 @@ namespace Prepod.Controllers
     {
         // GET: Students
         mydbEntities model = new mydbEntities();
-        public ActionResult IndexP()
+        public ActionResult Index()
         {
             List<students_group> students = model.students_group.ToList();
+            List<String> students_name = new List<String>();
+
+            foreach(var stud in students){
+                students_name = stud.name_s;
+            }
             return PartialView(students);
         }
     }
