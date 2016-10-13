@@ -13,29 +13,38 @@
 </head>
 <body>
 
-    <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-        <div class="container-fluid">
-            
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#responsiv-new">
-                    <span class="sr-only">Toggle navigation</span>
+    <nav role="navigation" class="navbar navbar-default" id="LayouytNavbar">
+       
+        <div class="navbar-header">
+            <button type="button" data-target="#navbarCollapse" data-toggle="collapse" class="navbar-toggle">
+               <span class="sr-only">Toggle navigation</span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand" href="#">Ежедневник преподавателя</a>
-            </div>
-           
+            </button>
+            <a href="~/Home" class="navbar-brand">Ежедневник преводавателя</a>
         </div>
-    </div>
+            
+        <div id="navbarCollapse" class="collapse navbar-collapse">
+            <ul class="nav navbar-nav" id="SettingsTableRedaktor">
+                <li class="active"><a href="~/Home">Главная</a></li>
+                <li><a href="~/TimeTableRedaktor">Редактировать расписание</a></li>
+                
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="#">Войти</a></li>
+            </ul>
+        </div>
+    </nav>
     @RenderBody()
 
 
 
-    <!-- The template to display files available for upload -->
+
     @Scripts.Render("~/bundles/jQuery")
     @Scripts.Render("~/bundles/Bootstrap")
     @Scripts.Render("~/bundles/ajax")
+    @Scripts.Render("~/bundles/scriptsLayout")
     @RenderSection("scripts", required: false)
 </body>
 </html>

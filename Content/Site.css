@@ -168,7 +168,7 @@ table.cell-size td{
 }
 
 .material-switch > label {
-    cursor: pointer;
+    cursor: pointer; 
     height: 0px;
     position: relative; 
     width: 40px;  
@@ -214,6 +214,12 @@ table.cell-size td{
 .VisBelarussianBudget{
     visibility: visible;
 }
+
+#LayouytNavbar{
+  /* background-color:#000000;
+   color: #ffffff;*/
+}
+
 /*
 .date-picker,
 .date-container {

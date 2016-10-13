@@ -30,6 +30,8 @@ namespace Prepod
                       "~/Content/jquery-ui.css"));
            bundles.Add(new ScriptBundle("~/bundles/ajax").Include(
                        "~/Scripts/jquery.unobtrusive-ajax.js"));
+           bundles.Add(new ScriptBundle("~/bundles/scriptsLayout").Include(
+                        "~/Scripts/TableRedaktorListener.js"));
         }
     }
 }

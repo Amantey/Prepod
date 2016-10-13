@@ -1,0 +1,18 @@
+﻿.btn-glyphicon { padding:8px; background:#ffffff; margin-right:4px; }
+.icon-btn { padding: 1px 15px 3px 2px; border-radius:50px;}
+
+.border-block{
+   align-content:center; 
+   
+}
+.btn_same{
+    width: 270px;
+    height: 70px;
+}
+div.space{
+    height: 30px;
+    width:100%;
+}
+.EditTextArea{
+    resize: none;
+}
