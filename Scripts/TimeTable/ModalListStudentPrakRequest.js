@@ -3,7 +3,7 @@
     $(".compItem").click(function (e) {
         
         e.preventDefault();
-        $.get('Students/Index', function (students) {
+        $.get('/Students/Index', function (students) {
             var title = "";
             var content = "<tbody>"
             var columns = "";

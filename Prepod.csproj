@@ -186,6 +186,7 @@
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\TableRedaktor.css" />
+    <Content Include="Content\TimeTable.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
@@ -224,11 +225,12 @@
     <None Include="Scripts\jquery-3.1.1.intellisense.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
-    <Content Include="Scripts\CreatorTimeTable.js" />
-    <Content Include="Scripts\DateAndTime.js" />
-    <Content Include="Scripts\DynamicCreatorHTML.js" />
-    <Content Include="Scripts\DynamicTableLek.js" />
-    <Content Include="Scripts\DynamicTablePrak.js" />
+    <Content Include="Scripts\TimeTable\TimeTableListener.js" />
+    <Content Include="Scripts\TimeTable\CreatorTimeTable.js" />
+    <Content Include="Scripts\TimeTable\DateAndTime.js" />
+    <Content Include="Scripts\TimeTable\ModalListStudentPrakRequest.js" />
+    <Content Include="Scripts\TimeTable\DynamicTableLek.js" />
+    <Content Include="Scripts\TimeTable\DynamicTablePrak.js" />
     <Content Include="Scripts\jquery-3.1.1.js" />
     <Content Include="Scripts\jquery-3.1.1.min.js" />
     <Content Include="Scripts\jquery-3.1.1.slim.js" />
@@ -251,8 +253,8 @@
     <Content Include="Scripts\respond.matchmedia.addListener.js" />
     <Content Include="Scripts\respond.matchmedia.addListener.min.js" />
     <Content Include="Scripts\respond.min.js" />
-    <Content Include="Scripts\TableRedaktorListener.js" />
-    <Content Include="Scripts\TableRedaktorRequest.js" />
+    <Content Include="Scripts\TimeTableRedaktor\TableRedaktorListener.js" />
+    <Content Include="Scripts\TimeTableRedaktor\ModalListGroupsRequest.js" />
     <Content Include="Scripts\_references.js" />
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Web.config">

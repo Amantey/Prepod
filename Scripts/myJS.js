@@ -1,10 +1,14 @@
 ﻿$(document).ready(function () {
+
+    // свалка скриптов
+
+/*
     var dData;
     var day;
     var num;
+    */
 
-
-    var id = "";
+    //var id = "";
     /*$.ajax({
         type: "GET",
         url: 'Home/GetRaspisanie',
@@ -14,10 +18,10 @@
         }
     });*/
     
-    var archievDate = new Date();
+   /* var archievDate = new Date();
 
     var divs = $('.block-day');
-    var as = $('div.panel-heading a');
+    var as = $('div.panel-heading a');*/
     
    // var selectPrak = "<select> <option>   </option><option>п</option><option>5</option><option>4</option><option>3</option><option>2</option><option>п/2</option> </select>"
 
@@ -242,7 +246,7 @@
     
 
     
-    //скрывает "продолжительность" пар, при переключение флажка(modalsubject)
+   /* //скрывает "продолжительность" пар, при переключение флажка(modalsubject)
     $('#check_period').change(function () {
         
         alert($('#check_period : checked'));
@@ -252,29 +256,11 @@
         } else {
             $('#period').attr('hidden', true);
         }
-    });
+    });*/
 
     
 
-    //скрывает расписание при нажатии на область
-    $(".dayOnClick").on('click', function () {
-        $("#timetable").addClass("table-hide");
-
-        $("#detailTable").removeClass("table-hide");
-       
-        var classList = $(this).attr('class').split(/\s+/);
-        $.each(classList, function (index, item) {
-            if (item != 'dayOnClick') {
-                $("#imageCenterDetailTable").attr("src", "/Images/"+ item +".png");
-            }
-        });
-    });
-
-    $("#back-on-table").on("click", function () {
-        $("#timetable").removeClass("table-hide");
-           
-        $("#detailTable").addClass("table-hide");
-    });
+    
 
     //ставит и удаляет "н-ки" на модальной форме лекции
     /*$("#TableListOfStudentPrak td").on("click", function () {

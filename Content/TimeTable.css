@@ -1,0 +1,24 @@
+﻿th.center{
+    text-align: center;
+    vertical-align: middle;
+}
+th.headcolor{
+    background-color:#333333;
+    color: white;
+}
+td.headcolor{
+    width: 30px;
+
+    background-color:#333333;
+    color: white;
+}
+tr th{
+    background-color:#333333;
+    color: white;
+}
+th.clock{
+    width: 50px;
+}
+th.typeClass{
+    width: 75px;
+}
