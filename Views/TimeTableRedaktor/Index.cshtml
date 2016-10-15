@@ -6,10 +6,12 @@
         Layout = "~/Views/Shared/_Layout.cshtml";
     }
     @{
-        ViewBag.Title = "HZ";
+        ViewBag.Title = "";
     }
-
-    <link href="~/Content/TableRedaktor.css" rel="stylesheet">
+    @section scripts{
+        @Scripts.Render("~/bundles/TimeTableRedaktor");
+    }
+    
 
     <meta name="viewport" content="width=device-width" />
     <title>IndexTimeTableRedaktor</title>

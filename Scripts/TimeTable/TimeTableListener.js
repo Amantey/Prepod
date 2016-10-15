@@ -18,4 +18,7 @@
            
         $("#detailTable").addClass("table-hide");
     });
+
+    $("#SettingsMenu li").removeClass("active");
+    $("#SettingsMenu li:nth-child(1)").addClass("active");
 });

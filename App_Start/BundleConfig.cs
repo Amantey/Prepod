@@ -28,7 +28,8 @@ namespace Prepod
                       "~/Content/bootstrap.css",
                       "~/Content/site.css",
                       "~/Content/jquery-ui.css",
-                      "~/Content/TimeTable.css"));
+                      "~/Content/TimeTable.css",
+                      "~/Content/TableRedaktor.css"));
 
            bundles.Add(new ScriptBundle("~/bundles/ajax").Include(
                        "~/Scripts/jquery.unobtrusive-ajax.js"));
@@ -44,7 +45,8 @@ namespace Prepod
            bundles.Add(new ScriptBundle("~/bundles/TimeTableRedaktor").Include(
                         
                         "~/Scripts/TimeTableRedaktor/TableRedaktorListener.js",
-                        "~/Scripts/TimeTableRedaktor/ModalListGroupsRequest.js"
+                        "~/Scripts/TimeTableRedaktor/ModalListGroupsRequest.js",
+                        "~/Scripts/TimeTableRedaktor/CreatorTimeTableRedaktor.js"
                ));
            bundles.Add(new ScriptBundle("~/bundles/globalScripts").Include(
                         "~/Scripts/Plugins.js"

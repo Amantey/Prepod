@@ -10,7 +10,7 @@
 
 
     title += "<thead> <tr>";
-    for(var i = 0; i < CountDay+1; i++){
+    for(var i = 0; i < CountTD+1; i++){
         title += "<th class='center headcolor'></th>";
     }
     title += "</tr></thead>";
