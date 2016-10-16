@@ -57,7 +57,7 @@
                             <div class="col-md-4 col-sm-4 col-xs-4">
                                 <label class="control-label" for="TypeOfOccupation"> Тип занятия</label>
                             </div>
-                            <div class="col-md-8 col-sm-8 col-xs-8">
+                            <div data-week="1" class ="col-md-8 col-sm-8 col-xs-8">
                                 <select name="Тип_занятия" class="form-control" id="TypeOfOccupation">
                                     <option value="Лекция" selected="selected">Лекция</option>
                                     <option value="Семинар">Семинар</option>
@@ -71,7 +71,7 @@
                                 <label class="control-label"> Неделя</label>
                             </div>
                             <div class="col-md-8 col-sm-8 col-xs-8">
-                                <select name="неделя" class="form-control">
+                                <select name="неделя" class="form-control" id="TypeWeek">
                                     <option value="null" selected="selected">Обычная</option>
                                     <option value="true">Верхняя</option>
                                     <option value="false">Нижняя</option>
@@ -110,7 +110,7 @@
             </div>
             <div class="modal-footer">
                 <button id="CancelSubject" class="btn btn-danger" type="button" data-dismiss="modal"> Отмена</button>
-                <button id="ClearSubject" class="btn btn-info" type="button" data-dismiss="modal">Очистить</button>
+                <button id="ClearSubject" class="btn btn-info" type="button">Очистить</button>
                 <button id="AddSubject" class="btn btn-success" type="button" data-dismiss="modal">Принять</button>
             </div>
         </div>

@@ -43,10 +43,10 @@ namespace Prepod
                         "~/Scripts/TimeTable/TimeTableListener.js"
                         ));
            bundles.Add(new ScriptBundle("~/bundles/TimeTableRedaktor").Include(
-                        
+                        "~/Scripts/TimeTableRedaktor/CreatorTimeTableRedaktor.js",
                         "~/Scripts/TimeTableRedaktor/TableRedaktorListener.js",
-                        "~/Scripts/TimeTableRedaktor/ModalListGroupsRequest.js",
-                        "~/Scripts/TimeTableRedaktor/CreatorTimeTableRedaktor.js"
+                        "~/Scripts/TimeTableRedaktor/ModalListGroupsRequest.js"
+                        
                ));
            bundles.Add(new ScriptBundle("~/bundles/globalScripts").Include(
                         "~/Scripts/Plugins.js"
