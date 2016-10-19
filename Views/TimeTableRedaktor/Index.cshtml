@@ -1,0 +1,47 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    @{
+        Layout = "~/Views/Shared/_Layout.cshtml";
+    }
+    @{
+        ViewBag.Title = "";
+    }
+    @section scripts{
+        @Scripts.Render("~/bundles/TimeTableRedaktor");
+    }
+    
+
+    <meta name="viewport" content="width=device-width" />
+    <title>IndexTimeTableRedaktor</title>
+    
+</head>
+<body>
+    <div class="col-md-5 col-lg-5 border-block">
+        
+               
+        
+            <a class="btn btn-lg btn-primary btn_same" href="~/TimeTableRedaktor/TableRedaktor">
+                <table>
+                    <tbody>
+                        <tr><td rowspan="2"><i class="glyphicon glyphicon-time "></i></td><td><span>Расписание_1</span></td></tr>
+                        <tr><td><small>Период:1.09.2016 - 29.12.2016</small></td></tr>
+                    </tbody>
+                </table>
+            </a>
+        
+            <div class="space"></div>
+            <a class="btn btn-lg btn-success btn_same" href="~/TimeTableRedaktor/TableRedaktor">
+                <table>
+                    <tbody>
+                        <tr><td rowspan="2"><i class="glyphicon glyphicon-plus"></i></td><td><span>Новое расписание</span></td></tr>
+                        <tr><td><small>Добавить новое расписание</small></td></tr>
+                    </tbody>
+                </table>
+            </a>
+</div>
+
+    
+</body>
+</html>

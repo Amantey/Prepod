@@ -138,7 +138,7 @@
             $("#modalListOfStudentPrak tbody tr:nth-child(odd) td:nth-child(" + min + ")").each(function () { // объединяет ячейки в таблице
                 $(this).attr("colspan", colspan);
             })
-            $("#modalListOfStudentPrak thead tr:nth-child(even) th:nth-child(" + min + ")").each(function () { // объединяет ячейки в head-строке таблицы
+            $("#modalListOfStudentPrak thead tr:nth-child(even) th:nth-child(" + (min - 1) + ")").each(function () { // объединяет ячейки в head-строке таблицы
                 $(this).attr("colspan", colspan);
             })
 
@@ -186,7 +186,7 @@
 
         // делает анологично предыдущему, только для head-строки в таблице практики
 
-        $("#modalListOfStudentPrak thead tr:nth-child(even) th:nth-child(" + (index + 1) + ")").each(function () {
+        $("#modalListOfStudentPrak thead tr:nth-child(even) th:nth-child(" + (index) + ")").each(function () {
             countCol = $(this).attr("colspan");
             numberCol = $(this).index();
             $(this).removeAttr("colspan");
@@ -317,7 +317,7 @@
         $('#TableListOfStudentPrak thead th').each(function () {
 
             $(this).removeClassWild("col*");
-            $(this).addClass("col" + ($(this).index() - 1));
+            $(this).addClass("col" + ($(this).index()));
 
         });
 

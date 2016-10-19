@@ -11,12 +11,7 @@ namespace Prepod.Controllers
     {
         // GET: Students
         mydbEntities model = new mydbEntities();
-        public ActionResult IndexP()
-        {
-            List<students_group> students = model.students_group.ToList();
-            return PartialView(students);
-        }
-
+        
         public ActionResult Index()
         {
             List<String> Str = new List<string>();

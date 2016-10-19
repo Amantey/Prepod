@@ -27,9 +27,30 @@ namespace Prepod
            bundles.Add(new StyleBundle("~/bundles/css").Include(
                       "~/Content/bootstrap.css",
                       "~/Content/site.css",
-                      "~/Content/jquery-ui.css"));
+                      "~/Content/jquery-ui.css",
+                      "~/Content/TimeTable.css",
+                      "~/Content/TableRedaktor.css"));
+
            bundles.Add(new ScriptBundle("~/bundles/ajax").Include(
                        "~/Scripts/jquery.unobtrusive-ajax.js"));
+
+           bundles.Add(new ScriptBundle("~/bundles/TimeTable").Include(
+                        "~/Scripts/TimeTable/CreatorTimeTable.js",
+                        "~/Scripts/TimeTable/DateAndTime.js",
+                        "~/Scripts/TimeTable/ModalListStudentPrakRequest.js",
+                        "~/Scripts/TimeTable/DynamicTableLek.js",
+                        "~/Scripts/TimeTable/DynamicTablePrak.js",
+                        "~/Scripts/TimeTable/TimeTableListener.js"
+                        ));
+           bundles.Add(new ScriptBundle("~/bundles/TimeTableRedaktor").Include(
+                        "~/Scripts/TimeTableRedaktor/CreatorTimeTableRedaktor.js",
+                        "~/Scripts/TimeTableRedaktor/TableRedaktorListener.js",
+                        "~/Scripts/TimeTableRedaktor/ModalListGroupsRequest.js"
+                        
+               ));
+           bundles.Add(new ScriptBundle("~/bundles/globalScripts").Include(
+                        "~/Scripts/Plugins.js"
+               ));
         }
     }
 }

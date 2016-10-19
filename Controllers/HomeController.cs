@@ -13,10 +13,6 @@ namespace Prepod.Controllers
             return View();
         }
 
-        public ActionResult PartialRaspisanie()
-        {
-            return View();
-        }
 
         public ActionResult About()
         {
